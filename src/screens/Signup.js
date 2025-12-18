@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
-import { handleError } from '../utils';
 import axios from 'axios';
+import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import { handleError } from '../utils';
 
 
 export default function Signup() {
@@ -33,7 +33,7 @@ export default function Signup() {
 
 
         try {
-            const res = await axios.post("http://localhost:8080/api/fooditems/signup", signupInfo);
+            const res = await axios.post("https://food-backend-app-pvw1.onrender.com/api/fooditems/signup", signupInfo);
             console.log(res.data);
             toast.success(res.data.message); // ✅ Success Toast
             setTimeout(() => {

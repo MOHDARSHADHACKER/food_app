@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MyOrders() {
   const [orders, setOrders] = useState([]);
@@ -8,7 +8,7 @@ export default function MyOrders() {
   useEffect(() => {
     async function fetchOrders() {
       try {
-        const res = await fetch("http://localhost:8080/api/myOrderData", {
+        const res = await fetch("https://food-backend-app-pvw1.onrender.com/api/myOrderData", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email })
