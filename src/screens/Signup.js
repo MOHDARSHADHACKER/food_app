@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
-import Bgsignup from "../assets/images/SignupBg.jpg";
+import bgImage from '../assets/images/bgImage.jpg';
 import { handleError } from '../utils';
 
 export default function Signup() {
@@ -52,7 +52,7 @@ export default function Signup() {
   style={{
     minHeight: "100vh",          // 👈 height issue fix
     width: "100%",
-    backgroundImage: `url(${Bgsignup})`,
+    backgroundImage: `url(${bgImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat"
