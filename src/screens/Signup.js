@@ -2,8 +2,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import Bgsignup from "../assets/images/SignupBg.jpg";
 import { handleError } from '../utils';
-
 
 export default function Signup() {
 
@@ -47,7 +47,18 @@ export default function Signup() {
     return (
         <>
         <div>
-  <div className="d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
+<div
+  className="d-flex justify-content-center align-items-center"
+  style={{
+    minHeight: "100vh",          // 👈 height issue fix
+    width: "100%",
+    backgroundImage: `url(${Bgsignup})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+>
+
   <div className="card" style={{ width: "18rem" }}>
                     <h5 className="card-title">Signup </h5>
                     <div className='container'>

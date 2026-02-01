@@ -2,8 +2,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import bgImage from '../assets/images/bgImage.jpg';
 import { handleError } from '../utils';
-
 
 export default function Login() {
 
@@ -51,7 +51,7 @@ export default function Login() {
 
   return (
     <>
-     <div className="d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
+     <div className="d-flex justify-content-center align-items-center" style={{ height: "100vh", backgroundImage: `url(${bgImage})` }}>
   <div className="card" style={{ width: "18rem", height: "20rem" }}>
       <div className='container'>
         <form onSubmit={handleLogin}>
